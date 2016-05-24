@@ -12,9 +12,7 @@ module.exports = function (app) {
       });
 
   app.route('/api/search/latest')
-      .get(function (req, res) {
-          res.send('Latest...');
-      });
+      .get(imgSearch.getLatest);
 
   app.route('/api/search/:term')
       .get(imgSearch.getSearch);      
